@@ -14,7 +14,7 @@ Note: Use at your own risk, you might get banned and I'm not responsible for tha
 
 4.) Click on Create application at the end. 
 
-**Remember that your API hash is secret and Telegram won’t let you revoke it. Don’t post it anywhere!**
+**Remember that your API hash gives full access to your account and Telegram won’t let you revoke it. Keep it a secret and don’t post it anywhere!**
 ###### Running the bot
 1.) Clone this repo and enter it
 
