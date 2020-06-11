@@ -7,7 +7,7 @@ api_hash = os.getenv('API_HASH')
 
 client = TelegramClient('session', api_id, api_hash)
 client.start()
-
+print('Logged in to telegram!')
 pvebot_id = 807376493
 chtwrs_id = 408101137
 
@@ -17,7 +17,8 @@ async def new_message(event):
     if event.from_id == pvebot_id:
         await event.forward_to(chtwrs_id)
         await event.mark_read()
-    if event.from_id == chtwrs_id:
+        print('Forwarding message from PVE bot')
+    elif event.from_id == chtwrs_id:
         if event.message == "Too late. Action is not available.":
             await event.mark_read()
 
