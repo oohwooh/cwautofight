@@ -19,7 +19,7 @@ async def new_message(event):
         await event.mark_read()
         print('Forwarding message from PVE bot')
     elif event.from_id == chtwrs_id:
-        if event.message == "Too late. Action is not available.":
+        if event.message.message == "Too late. Action is not available.":
             await event.mark_read()
 
 client.run_until_disconnected()
