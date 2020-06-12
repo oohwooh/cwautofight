@@ -15,7 +15,7 @@ chtwrs_id = 408101137
 @client.on(events.NewMessage)
 async def new_message(event):
     if event.from_id == pvebot_id:
-        await event.forward_to(chtwrs_id)
+        await client.send_message(chtwrs_id, event.buttons[0].inline_query)
         await event.mark_read()
         print('Forwarding message from PVE bot')
     elif event.from_id == chtwrs_id:
